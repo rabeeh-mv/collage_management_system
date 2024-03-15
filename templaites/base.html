@@ -1,0 +1,74 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %} {% endblock %}</title>
+    <link rel="stylesheet" href="{% static 'plugins/boostrap/bootstrap.min.css'%}">
+    <link rel="stylesheet" href="{% static 'style sheet/style.css'%}">
+    {% block styles %} {% endblock %}
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light" style="box-shadow: -1px 7px 8px 0 rgb(0 0 0 / 10%);">
+            <div class="container">
+      <a class="navbar-nav" href="#"><img src="{% static 'images/tilte.png' %}" width="115px" alt="" srcset=""></a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+    
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="{% url 'home' %}">Home <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Updates</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-expanded="false">
+              Dropdown
+            </a>
+            <div class="dropdown-menu">
+              <a class="dropdown-item" href="#">Features post</a>
+              <a class="dropdown-item" href="#">Another action</a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" href="#">Something else here</a>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'Features' %}">Features</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Acadamic</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">E-read</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Contact</a>
+          </li>
+         
+        </ul>
+        <!-- <form class="form-inline my-2 my-lg-0">
+          <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+          <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+        </form> -->
+      </div>
+      </div>
+    </nav>
+       </header>
+       <div class="container">
+       {% block content %}
+       {% endblock %}
+    </div>
+
+       <script src="{% static 'plugins/boostrap/popper.min.js.download' %}"></script>
+       <script src="{% static 'plugins/boostrap/jquery-3.2.1.slim.min.js.download' %}"></script>
+       <script src="{% static 'plugins/boostrap/bootstrap.min.js.download' %}"></script>
+       {% block scripts %}{% endblock %}
+</body>
+</html>

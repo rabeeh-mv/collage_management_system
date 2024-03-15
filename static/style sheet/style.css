@@ -1,0 +1,132 @@
+body{
+    /* background-color:hsl(202, 87%, 47%) ; */
+    background-color:#f3f8fb ;
+}
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+.botten a{
+    text-decoration: none;
+    color: black;
+}
+
+.homepage .image-slider{
+    margin-top: 16px;
+    background-color: white;
+    height: 420px;
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: -1px 7px 8px 0 rgb(0 0 0 / 10%);
+}
+.mega-flex {
+    display: flex;
+    flex-wrap: nowrap;
+    align-content: center;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 auto;
+}    
+.botten-areas {
+
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    align-items: center;
+    justify-content: space-between;
+    margin: 8px auto;
+}
+.botten-areas .botten {
+    width: calc((100% - 50px) / 3);
+    float: left;
+    background: white;
+    padding: 10px 0 25px;
+    margin: 8px 0 ;
+    height: 130px;
+    overflow: hidden;
+    position: relative;
+    border-radius: 14px;
+    box-shadow: -1px 7px 8px 0 rgb(0 0 0 / 10%);
+    transition: all .3s ease;
+}
+.botten:hover {
+    margin-top: -10px;
+}
+.iamge-btn {
+    margin: auto;
+    text-align: center;
+    overflow: hidden;
+    height: 88px;
+}
+.iamge-btn a {
+    height: 88px;
+    overflow: hidden;
+    width: 100%;
+    display: block;
+    margin: 0;
+}
+ .botten img {
+    max-width: 100%;
+}
+.botten-areas img {
+    height: 80px;
+    width: 80px;
+    object-fit: cover;
+}
+.ListButtons-area {
+    display: flex;
+    justify-content: space-around;
+    margin: 0 17px;
+    flex-wrap: wrap;
+    width: 60%;
+}
+.botten .title {
+    text-align: center;
+    padding: 0 5px;
+}
+.title h2 {
+    display: block;
+    width: 100%;
+    line-height: 18px;
+    font-family: var(--title-font);
+    font-size: 13px;
+    text-align: center;
+    text-transform: capitalize;
+    margin: 0;
+}
+.title h2 a {
+    color: rgb(94, 5, 5);
+    display: block;
+    line-height: 21px;
+}
+.image-part{
+    height:  460px;
+    width: 100%;
+    background-color: white;
+    box-shadow: -1px 7px 8px 0 rgb(0 0 0 / 10%);
+    border-radius: 5px;
+}
+
+.story-item {
+    width: 100%;
+    height: 131px;
+    background-color: white;
+    display: flex;
+    box-shadow: -1px 7px 8px 0 rgb(0 0 0 / 10%);
+    margin-bottom: 30px;
+    border-radius: 5px;
+}
+.story-item .thambnail-image{
+    width: 140px;
+    height: 100%;
+    background-color: bisque;
+}
+.piki-hero-box {
+    padding: 10px;
+}
+.piki-hero-box span{
+    display: block;
+
+}

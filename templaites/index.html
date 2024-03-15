@@ -1,0 +1,282 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %} {% endblock %}
+{% block styles %}
+<!-- swiper slide css cdn -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+<!-- swiper slide csss -->
+<style>
+  html,
+  body {
+    position: relative;
+    height: 100%;
+  }
+
+  body {
+    background: #eee;
+    font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    color: #000;
+    margin: 0;
+    padding: 0;
+  }
+
+  .swiper {
+    width: 100%;
+    height: 100%;
+  }
+
+  .swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+</style>
+{% endblock %}
+
+{% block content %}
+<section>
+    <div class="container">
+      <div class="homepage">
+        <div class="row">
+          <div class="col-12 col-md-6" >
+            <div class="image-slider" style="position: relative;">
+              <!-- Swiper -->
+  <div class="swiper mySwiper">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide">
+        <h3 style="position: absolute;">hi</h3>
+        <img src="{% static 'images/admission d.jpg' %}" width="100%" alt="" srcset="">
+      </div>
+      <div class="swiper-slide">Slide 2</div>
+    
+    </div>
+    <div class="swiper-pagination"></div>
+  </div>
+
+            </div>
+          </div>
+          
+           <div class="botten-side col-12 col-md-6">
+            <div class="botten-areas">
+            <div class="botten">
+              <div class="iamge-btn">
+                <a href="{% url 'know-us' %}">
+                  <img src="{% static 'images/jmic.png' %}" width="100%" alt="" srcset="">
+                </a>
+              </div>
+              <div class="title">
+                <a href="{% url 'know-us' %}">
+                  <h2>kNOW US</h2>
+                </a>
+              </div>
+            </div>
+            <!-- 2 -->
+            <div class="botten">
+              <div class="iamge-btn">
+                <a href="{% url 'Features' %}">
+                  <img src="{% static 'images/faculty.png' %}" width="100%" alt="" srcset="">
+                </a>
+              </div>
+              <div class="title">
+                <a href="{% url 'Features' %}">
+                  <h2>Faculties</h2>
+                </a>
+              </div>
+            </div>
+            <!-- 3 -->
+            <div class="botten">
+              <div class="iamge-btn">
+                <a href="{% url 'Admission' %}">
+                  <img src="{% static 'images/admission.png' %}" width="100%" alt="" srcset="">
+                </a>
+              </div>
+              <div class="title">
+                <a href="{% url 'Admission' %}">
+                  <h2>Admission</h2>
+                </a>
+              </div>
+            </div>
+            <!-- 4 -->
+            <div class="botten">
+              <div class="iamge-btn">
+                <a href="{% url 'Academics' %}">
+                  <img src="{% static 'images/academic.png' %}" width="100%" alt="" srcset="">
+                </a>
+              </div>
+              <div class="title">
+                <a href="{% url 'Academics' %}">
+                  <h2>Academics</h2>
+                </a>
+              </div>
+            </div>
+            <!-- 5 -->
+            <div class="botten">
+              <div class="iamge-btn">
+                <a href="{% url 'Students-Corner' %}">
+                  <img src="{% static 'images/students corner.png' %}" width="100%" alt="" srcset="">
+                </a>
+              </div>
+              <div class="title">
+                <a href="{% url 'Students-Corner' %}">
+                  <h2>Students' Corner</h2>
+                </a>
+              </div>
+            </div>
+            <!-- 6 -->
+            <div class="botten">
+              <div class="iamge-btn">
+                <a href="{% url 'Notifications' %}">
+                  <img src="{% static 'images/pngwing.com (28).png' %}" width="100%" alt="" srcset="">
+                </a>
+              </div>
+              <div class="title">
+                <a href="{% url 'Notifications' %}">
+                  <h2>
+                    Notifications</h2>
+                </a>
+              </div>
+            </div>
+            <!-- 7 -->
+            <div class="botten">
+              <div class="iamge-btn">
+                <a href="{% url 'Downloads' %}">
+                  <img src="{% static 'images/download color.png' %}" width="100%" alt="" srcset="">
+                </a>
+              </div>
+              <div class="title">
+                <a href="{% url 'Downloads' %}">
+                  <h2>
+                    Downloads</h2>
+                </a>
+              </div>
+            </div>
+            <!-- 8 -->
+            <div class="botten">
+              <div class="iamge-btn">
+                <a href="{% url 'Gallery' %}">
+                  <img src="{% static 'images/pngwing(1).com .png' %}" width="100%" alt="" srcset="">
+                </a>
+              </div>
+              <div class="title">
+                <a href="{% url 'Gallery' %}">
+                  <h2>
+                    Gallery</h2>
+                </a>
+              </div>
+            </div>
+            <!-- 9 -->
+            <div class="botten">
+              <div class="iamge-btn">
+                <a href="https://www.youtube.com/@jamiamahiriyya">
+                  <img src="{% static 'images/video.png' %}" width="100%" alt="" srcset="">
+                </a>
+              </div>
+              <div class="title">
+                <a href="https://www.youtube.com/@jamiamahiriyya">
+                  <h2>
+                    Videos</h2>
+                </a>
+              </div>
+            </div>
+          </div>
+                  
+    </div>
+    </div>       
+ </div>
+</div>
+
+
+   
+    </section>
+    <section>
+      <div class="container">
+      <div class="row">
+      <div class="col-12">
+        <div class="icon">
+          <h4 style="display: inline-block;">TOP STORIES</h4>
+          <a href="">
+            <h6 style="float: right;">Show More</h6>
+          </a>
+        </div>
+      </div>
+      <div class="col-12 col-md-6">
+        <div class="image-part">
+        </div>
+      </div>
+      <div class="col-12 col-md-6">
+          <div class="story-ithems">
+            <div class="story-item item1">
+              <div class="thambnail-image">
+              </div>
+              <div class="piki-hero-box">
+                <a href="">
+                  <span class="label">result</span>
+                  <span class="title">HALF YEARLY EXAMINATION RESULT 2023</span>
+                </a>
+                <span class="post-date">12/03/2023</span>
+              </div>
+            </div>
+            <div class="story-item item2">
+              <div class="thambnail-image">
+              </div>
+              <div class="piki-hero-box">
+                <a href="">
+                  <span class="label">result</span>
+                  <span class="title">HALF YEARLY EXAMINATION RESULT 2023</span>
+                </a>
+                <span class="post-date">12/03/2023</span>
+              </div>
+            </div>
+            <div class="story-item item3">
+              <div class="thambnail-image">
+              </div>
+              <div class="piki-hero-box">
+                <a href="">
+                  <span class="label">result</span>
+                  <span class="title">HALF YEARLY EXAMINATION RESULT 2023</span>
+                </a>
+                <span class="post-date">12/03/2023</span>
+              </div>
+            </div>
+          </div>
+      </div>
+      
+    </div>
+  </div>
+    </section>
+    <section style="background-color:#ddf2ff;;">
+      <div class="container">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel voluptate corporis velit suscipit cum! Laboriosam vel eligendi earum praesentium dolorem fugiat animi recusandae officia, amet voluptatem provident nulla hic dolorum.</p>
+      </div>
+
+    </section>
+    {% endblock %}
+
+    {% block scripts %}
+      <!-- Swiper JS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script>
+    var swiper = new Swiper(".mySwiper", {
+      pagination: {
+        el: ".swiper-pagination",
+        dynamicBullets: true,
+      },
+      autoplay: {
+        delay: 2500,
+        disableOnInteraction: false,
+      },
+    });
+  </script>
+    {% endblock %}
