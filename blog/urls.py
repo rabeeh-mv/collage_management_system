@@ -11,4 +11,5 @@ urlpatterns = [
     path('Downloads', views.Downloads, name='Downloads'),
     path('Gallery', views.Gallery, name='Gallery'),
     path('videos', views.videos, name='videos'),
+    path('About', views.About, name='About'),
 ]

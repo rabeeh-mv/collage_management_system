@@ -8,12 +8,62 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{% block title %} {% endblock %}</title>
     <link rel="stylesheet" href="{% static 'plugins/boostrap/bootstrap.min.css'%}">
+    <link
+    rel="stylesheet"
+    href="https://cdn-uicons.flaticon.com/uicons-regular-rounded/css/uicons-regular-rounded.css"
+  />
+  <link
+    rel="stylesheet"
+    href="https://cdn-uicons.flaticon.com/uicons-brands/css/uicons-brands.css"
+  />
+    <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="{% static 'style sheet/style.css' %}">
     {% block styles %} {% endblock %}
 </head>
 <body>
     <header>
-        <nav class="navbar navbar-expand-lg navbar-light" style="box-shadow: -1px 7px 8px 0 rgb(0 0 0 / 10%);">
+      <nav>
+        <div class="nav-bar">
+            <i class='bx bx-menu sidebarOpen' ></i>
+            <span class="logo navLogo"><a href="#">Mahiriyya</a></span>
+
+            <div class="menu">
+                <div class="logo-toggle">
+                    <span class="logo"><a href="#">menu</a></span>
+                    <i class='bx bx-x siderbarClose'></i>
+                </div>
+
+                <ul class="nav-links" style="margin-bottom: 0;">
+                    <li><a href="#"><i class="fi fi-rr-home"></i> Home</a></li>
+                    <li><a href="#"><i class="fi fi-rr-clip"></i> About</a></li>
+                    <li ><a href="#"><i class="fi fi-rr-folder-open"></i> Updates</a></li>
+                    <li><a href="#"><i class="fi fi-rr-graduation-cap"></i> Acadamic</a></li>
+                    <li><a href="#"><i class="fi fi-rr-envelope"></i> Contact</a></li>
+                </ul>
+            </div>
+
+            <div class="darkLight-searchBox">
+                <div class="dark-light">
+                    <i class='bx bx-moon moon'></i>
+                    <i class='bx bx-sun sun'></i>
+                </div>
+
+                <div class="searchBox">
+                   <div class="searchToggle">
+                    <i class='bx bx-x cancel'></i>
+                    <i class='bx bx-search search'></i>
+                   </div>
+
+                    <div class="search-field">
+                        <input type="text" placeholder="Search...">
+                        <i class='bx bx-search'></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+        <!-- <nav class="navbar navbar-expand-lg navbar-light" style="box-shadow: -1px 7px 8px 0 rgb(0 0 0 / 10%);">
             <div class="container">
       <a class="navbar-nav" href="#"><img src="{% static 'images/tilte.png' %}" width="115px" alt="" srcset=""></a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -52,20 +102,87 @@
             <a class="nav-link" href="#">Contact</a>
           </li>
          
-        </ul>
+        </ul> -->
         <!-- <form class="form-inline my-2 my-lg-0">
           <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
           <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
         </form> -->
+      <!-- </div>
       </div>
-      </div>
-    </nav>
+    </nav> -->
        </header>
        <div class="container">
        {% block content %}
        {% endblock %}
     </div>
+<script>
+  
+const body = document.querySelector("body"),
+      nav = document.querySelector("nav"),
+      modeToggle = document.querySelector(".dark-light"),
+      searchToggle = document.querySelector(".searchToggle"),
+      sidebarOpen = document.querySelector(".sidebarOpen"),
+      siderbarClose = document.querySelector(".siderbarClose");
 
+      let getMode = localStorage.getItem("mode");
+          if(getMode && getMode === "dark-mode"){
+            body.classList.add("dark");
+          }
+
+// js code to toggle dark and light mode
+      modeToggle.addEventListener("click" , () =>{
+        modeToggle.classList.toggle("active");
+        body.classList.toggle("dark");
+
+        // js code to keep user selected mode even page refresh or file reopen
+        if(!body.classList.contains("dark")){
+            localStorage.setItem("mode" , "light-mode");
+        }else{
+            localStorage.setItem("mode" , "dark-mode");
+        }
+      });
+
+// js code to toggle search box
+        searchToggle.addEventListener("click" , () =>{
+        searchToggle.classList.toggle("active");
+      });
+ 
+      
+//   js code to toggle sidebar
+sidebarOpen.addEventListener("click" , () =>{
+    nav.classList.add("active");
+});
+
+body.addEventListener("click" , e =>{
+    let clickedElm = e.target;
+
+    if(!clickedElm.classList.contains("sidebarOpen") && !clickedElm.classList.contains("menu")){
+        nav.classList.remove("active");
+    }
+});
+
+
+
+
+/* Please ❤ this if you like it! */
+
+
+(function($) { "use strict";
+
+		
+	$('body').on('mouseenter mouseleave','.nav-item',function(e){
+			if ($(window).width() > 750) {
+				var _d=$(e.target).closest('.nav-item');_d.addClass('show');
+				setTimeout(function(){
+				_d[_d.is(':hover')?'addClass':'removeClass']('show');
+				},1);
+			}
+	});	
+	
+	 
+	
+  })(jQuery); 
+</script>
        <script src="{% static 'plugins/boostrap/popper.min.js.download' %}"></script>
        <script src="{% static 'plugins/boostrap/jquery-3.2.1.slim.min.js.download' %}"></script>
        <script src="{% static 'plugins/boostrap/bootstrap.min.js.download' %}"></script>

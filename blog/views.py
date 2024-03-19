@@ -42,3 +42,6 @@ def Gallery(request):
 
 def videos(request):
     return render(request,'videos.html')
+
+def About(request):
+    return render(request,'about.html')
