@@ -2,22 +2,32 @@
 {% load static %}
 
 {% block title %} {% endblock %}
+{% block styles %} 
+
+{% endblock %}
 {% block content %}
 <h2>notifications</h2>
+<div class="container">
+  <div class="row">
 {% for Not in notification %}
-<!-- <div class="card-group"> -->
-<div class="card" style="width: 18rem;">
-    <img src="{{Not.imgs.url}}" class="card-img-top" alt="...">
+<div class="col-md-4 col-sm-6">
+<div class="card" syle="width: 18rem;">
+    <img src="{{Not.imgs.url}}" style="width: 100%; overflow: hidden;" class="card-img-top" alt="...">
     <div class="card-body">
       <span class="badge rounded-pill bg-light text-dark btn-outline-dark mb-3">#{{Not.label}}</span>
       <h5 class="card-title text-uppercase">{{Not.title}}</h5>
-      <!-- <p class="card-text">{{Not.content}}</p> -->
+
     </div>
     <div class="card-footer">
       <small class="text-muted">Last updated 3 mins ago</small>
     </div>
   </div>
   
-<!-- </div> -->
-  {% endfor %}
+</div>
+
+
+{% endfor %}
+
+</div>
+</div>
 {% endblock %}

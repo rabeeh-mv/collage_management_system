@@ -2,6 +2,48 @@
 {% load static %}
 
 {% block title %} {% endblock %}
+{% block styles %} 
+<link rel="stylesheet" href="{% static 'style sheet/gallery.css'%}">
+{% endblock %}
 {% block content %}
 <h2>Gallery</h2>
+
+<div class="section-padding gallery-section" id="gallery">
+    <div class="container">
+      <!-- Section Title Start -->
+      <div class="text-center">
+        <h2 class="title">JMIC Gallery</h2>
+        <p>JAMIA MAHIRIYYA ISLAMIC COLLEGE</p>
+      </div>
+      <!-- Section Title End -->
+
+      <div id="btncontainer" class="filter">
+        <a class="btn btn-active" href="#all">ALL</a>
+        <a class="btn" href="#Notifications">Notifications</a>
+        <a class="btn" href="#Faqults">Faqults</a>
+        <a class="btn" href="#students">students</a>
+      </div>
+
+      <!-- Gallery Section Start -->
+
+      <div class="gallery sets">
+        {% for im in not %}
+        <a class="all Notifications"><img src="{{im.imgs.url}}"/></a>
+        {% endfor %}
+        
+        {% for img in Features %}
+        <a class="all Faqults"><img src="{{img.image.url}}"/></a>
+        {% endfor %}
+        
+        <a class="all students"><img src="https://i.redd.it/2s7w09k01ol91.jpg"/></a>
+
+        
+      </div>
+    </div>
+  </div>
+{% endblock %}
+{% block scripts %}
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script src="{% static 'js/galler.js'%}"></script>
+
 {% endblock %}

@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from .models import Notification
+from .models import Notification ,Facultie
 
 # Create your views here.
 
@@ -10,7 +10,10 @@ def knowUs(request):
     return render(request,'know-us.html')
 
 def Features(request):
-    return render(request,'Features.html')
+    fact_list={
+        'Features':Facultie.objects.all()
+    }
+    return render(request,'Features.html',fact_list)
 
 def Admission(request):
     return render(request,'Admission.html')
@@ -31,7 +34,11 @@ def Downloads(request):
     return render(request,'Downloads.html')
 
 def Gallery(request):
-    return render(request,'Gallery.html')
+    gallery={
+        'not':Notification.objects.all(),
+         'Features':Facultie.objects.all()
+    }
+    return render(request,'Gallery.html',gallery)
 
 def videos(request):
     return render(request,'videos.html')

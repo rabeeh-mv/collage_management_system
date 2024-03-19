@@ -19,3 +19,9 @@ class Notification(models.Model):
         return self.title
 
 
+class Facultie(models.Model):
+    image = models.ImageField(upload_to='Facultie')
+    name = models.CharField(max_length=265)
+    position = models.TextField()
+    def __str__(self):
+        return self.name

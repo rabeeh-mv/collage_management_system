@@ -2,6 +2,23 @@
 {% load static %}
 
 {% block title %} {% endblock %}
+{% block styles %}
+<link rel="stylesheet" href="{% static 'style sheet/cads-fac.css'%}">
+{% endblock %}
 {% block content %}
 <h2>Features</h2>
+<div class="main">
+        {% for fac in Features %}
+        
+        <div class="card">
+            <div class="image">
+              <img src="{{fac.image.url}}" alt="Card Image">
+            </div>
+            <h3>{{fac.name}}</h3>
+            <p>{{fac.position}}</p>
+        </div>
+    
+        {% endfor %}
+    
+</div>
 {% endblock %}

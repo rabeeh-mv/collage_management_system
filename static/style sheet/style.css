@@ -39,7 +39,7 @@ body{
     margin: 8px auto;
 }
 .botten-areas .botten {
-    width: calc((100% - 50px) / 3);
+    width: calc((100% - 30px) / 3);
     float: left;
     background: white;
     padding: 10px 0 25px;
@@ -130,3 +130,17 @@ body{
     display: block;
 
 }
+@media (max-width:765px) {
+    .botten-areas{
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    align-items: center;
+    justify-content: space-around;
+    }
+    .botten-areas .botten {
+        width: calc((100% - 10px) / 2);
+    }
+
+}
+/* facultie page */
