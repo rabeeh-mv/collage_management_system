@@ -27,6 +27,8 @@ body{
     --text-color: #000000;
     --search-bar: #F2F2F2;
     --search-text: #010718;
+    --drop-nav : #010718;
+
 }
 
 body{
@@ -40,6 +42,7 @@ body.dark{
     --side-nav: #242526;
     --text-color: #CCC;
     --search-bar: #242526;
+    --drop-nav : #F2F2F2;
 }
 
 nav{
@@ -99,31 +102,35 @@ nav .nav-bar .logo a{
     list-style: none;
 }
 
-.nav-links li a{
+.nav-links li .a-tage{
     position: relative;
     font-size: 17px;
     font-weight: 400;
     color: var(--text-color);
     text-decoration: none;
-    padding: 10px;
+    padding: 10px 10px 5px 10px;
 }
 
-.nav-links li a::before{
+.nav-links li .a-tage::before{
     content: '';
     position: absolute;
     left: 50%;
     bottom: 0;
     transform: translateX(-50%);
-    height: 6px;
-    width: 6px;
-    border-radius: 50%;
+    height: 2px;
+    width: 60%;
+    /* border-radius: 50%; */
     background-color: var(--text-color);
     opacity: 0;
-    transition: all 0.3s ease;
+    transition: all 300ms linear;
 }
 
-.nav-links li:hover a::before{
+.nav-links li:hover .a-tage::before{
     opacity: 1;
+    bottom: 0;
+    transform: translate3d(1,1,1);
+
+
 }
 
 .nav-bar .darkLight-searchBox{
@@ -321,7 +328,7 @@ body.dark .search-field i{
 	font-size: 13px;
 	letter-spacing: 1px;
 	color: #212121;
-	background-color: #fcfaff;
+	
 	border: none;
 	border-radius: 3px;
 	box-shadow: 0 5px 10px 0 rgba(138, 155, 165, 0.15);
@@ -475,8 +482,36 @@ body.dark .search-field i{
     justify-content: space-around;
     }
     .botten-areas .botten {
-        width: calc((100% - 10px) / 2);
+        width: calc((100% - 20px) / 2);
+        margin: 5px 0 ;
     }
 
+}
+.dropbtn:hover .dropdown p{
+    display: block;
+}
+.dropdown{
+    box-sizing: none;
+    display: none;
+    display: flex;
+    flex-direction: column;
+    /* margin-top: 50px; */
+    position: absolute;
+    width: 200px;
+    height: auto;
+    background-color: var(--nav-color);
+    border-radius: 10px;
+}
+.dropdown p{
+    text-decoration: none;
+    all: unset;
+    margin: 2.5px;
+    padding: 5px 10px;
+    display: none;
+    color: white;
+    border-radius: 10px;
+}
+.dropdown p:hover{
+    background-color: blanchedalmond;
 }
 /* facultie page */
